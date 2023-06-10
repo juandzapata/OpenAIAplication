@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/logochat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textRequest"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/textRequest"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:padding="10dp"
+        android:text="Request:"
+        android:textSize="15sp"
+        android:textColor="#6d6d6d"
+        android:background="@drawable/border_background"
+        app:layout_constraintBottom_toTopOf="@id/textResponse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textResponse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/border_background"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="#6d6d6d"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/textInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="15dp"
+        android:text="Ingresa tu solicitud: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:hint="Escribe: Hello World! en Java."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sendButton" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="ENVÍAR"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
